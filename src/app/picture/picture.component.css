@@ -1,0 +1,36 @@
+.img-container{
+    height: 70%;
+    margin-top: 10px;
+}
+
+div, h2{
+    text-align:center;
+}
+
+input{
+    margin:auto;
+}
+
+.inner-img-container{
+    width: 80%;
+    height: 70%;
+    margin: auto;
+}
+
+.image{
+    width: auto;
+    float: left;
+    margin-right: 30px;
+    max-width: 60%;
+    max-height: 80%;
+    min-height: 300px;
+}
+
+.title{
+    width: 100%;
+}
+
+.explanation{
+    width: 100%;
+    margin-top: 10px;
+}

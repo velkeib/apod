@@ -1,0 +1,14 @@
+<h2>
+    Astronomy Picture of the Day
+</h2>
+<div>
+    <input type="date" [(ngModel)]="selectedDate" (change)="getPicture()">
+</div>
+<div class="img-container" *ngIf="!pictureLoading">
+    <div class="inner-img-container">
+        <img img-preloader *ngIf="picture.media_type == 'image'" [targetSource]="picture.url" class="image">
+        <iframe *ngIf="picture.media_type == 'video'" class="image" [src]="videoURL" frameborder="0" allowfullscreen></iframe>
+        <div class="title"><b>{{ picture.title }}</b><p *ngIf="picture.copyright"> by <b>{{ picture.copyright }}</b></p></div>
+        <div class="explanation">{{ picture.explanation }}</div>
+    </div>
+</div>
