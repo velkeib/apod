@@ -19,12 +19,13 @@ export class ImagePreloaderDirective implements OnInit {
   ngOnInit(){
 
     this.finalImage = this.defaultImage;
-    this.downloadingImage = new Image(); 
+    this.downloadingImage = new Image(100,100); 
 
     this.downloadingImage.onload = () => {
       console.log('image downloaded');
       this.finalImage = this.targetSource;
     }
+
     this.downloadingImage.src = this.targetSource;
 
 

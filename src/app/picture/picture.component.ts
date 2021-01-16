@@ -10,7 +10,7 @@ import { PictureService } from '../service/picture.service';
 export class PictureComponent implements OnInit {
 
   picture;
-  selectedDate: string;
+  selectedDate = new Date().toISOString().split('T')[0];
   pictureLoading = false;
   loaded = false;
   videoURL;
@@ -45,5 +45,15 @@ export class PictureComponent implements OnInit {
     this.loaded = true;
   }
 
+
+  paging(sign: number){
+    let date = new Date(this.selectedDate)
+    date.setDate(date.getDate() + sign)
+
+    this.selectedDate = date.toISOString().split('T')[0];
+
+    this.getPicture();
+
+  }
 
 }
